@@ -323,7 +323,8 @@ img {
   border-radius: 50%;
   transition: background-color var(--transition-animation);
 }
-.socials-list-link:hover {
+.socials-list-link:hover,
+.socials-list-link:focus {
   background-color: var(--pressed-state);
 }
 /* =================================CUSTOMERS=================================== */
@@ -346,14 +347,16 @@ img {
   border: 1px solid var(--subtle-text);
   transition: border-color var(--transition-animation);
 }
-.customer-link:hover {
+.customer-link:hover,
+.customer-link:focus {
   border-color: var(--pressed-state);
 }
 .customer-icon {
   fill: var(--subtle-text);
   transition: fill var(--transition-animation);
 }
-.customer-link:hover .customer-icon {
+.customer-link:hover .customer-icon,
+.customer-link:focus .customer-icon {
   fill: var(--pressed-state);
 }
 /* =================================PORTFOLIO================================= */
@@ -430,7 +433,8 @@ img {
 
   padding: 32px 16px;
 }
-.project-card-link:hover .pc-overlay-text {
+.project-card-link:hover .pc-overlay-text,
+.project-card-link:focus .pc-overlay-text {
   transform: translateY(0);
 }
 /* ================================== FOOTER ======================================*/
@@ -487,4 +491,41 @@ img {
 }
 .footer-social-link:hover {
   background-color: var(--success);
+}
+/* =================================== MODAL WINDOW ============================ */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  z-index: 999;
+  padding-top: 80px;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 408px;
+  height: 584px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  background-color: var(--modal-background);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
